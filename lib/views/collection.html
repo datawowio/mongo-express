@@ -262,6 +262,8 @@
             {% endif %}
           </th>
         {% endfor %}
+        <th> display </th>
+
       </thead>
       {% for document in docs %}
         <tr onclick="loadDocument('{{ document._id | json | safe | url_encode }}')">
@@ -278,6 +280,9 @@
             {{ document[column] | stringDocIDs | to_display | safe }}
             </div></td>
           {% endfor %}
+          <td>
+            <img src="{{document.filename}}" style="max-width: 100px">
+          </td>
         </tr>
       {% endfor %}
     </table>
