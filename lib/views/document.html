@@ -87,6 +87,8 @@
 
   <textarea class="col-md-12" id="document" name="document"{% if settings.read_only %} readonly="readonly"{% endif %}>{{ docString }}</textarea>
   <br />
+  <img class="display" src="{{document.filename}}">
+  <br />
 
   <div>
     {% if !settings.read_only %}

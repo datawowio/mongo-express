@@ -98,3 +98,13 @@
 .bold{
   font-weight:bold;
 }
+
+.display{
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.display.-thumbnail{
+  max-width: 100px;
+}
