@@ -91,6 +91,10 @@ module.exports = {
     sslKey:           process.env.ME_CONFIG_SITE_SSL_KEY_PATH   || '',
   },
 
+  datawow: {
+    dataset_path: process.env.ME_CONFIG_DATASET_PATH || '/datasets',
+  },
+
   //set useBasicAuth to true if you want to authenticate mongo-express loggins
   //if admin is false, the basicAuthInfo list below will be ignored
   //this will be true unless ME_CONFIG_BASICAUTH_USERNAME is set and is the empty string

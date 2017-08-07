@@ -100,6 +100,7 @@ if (!config.site.baseUrl) {
 
 app.use(config.site.baseUrl, middleware(config));
 app.use(config.site.baseUrl, csrf());
+app.use(express.static(config.datawow.dataset_path));
 
 if (config.site.sslEnabled) {
   defaultPort     = 443;

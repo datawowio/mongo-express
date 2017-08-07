@@ -21,6 +21,8 @@ EXPOSE 8081
 # override some config defaults with values that will work better for docker
 ENV ME_CONFIG_MONGODB_SERVER="mongo"
 ENV ME_CONFIG_MONGODB_ENABLE_ADMIN="true"
+ENV ME_CONFIG_MONGODB_PORT="27017"
+ENV ME_CONFIG_DATASET_PATH="/datasets"
 ENV VCAP_APP_HOST="0.0.0.0"
 
 WORKDIR /app
