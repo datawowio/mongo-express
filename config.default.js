@@ -92,7 +92,7 @@ module.exports = {
   },
 
   datawow: {
-    dataset_path: process.env.ME_CONFIG_DATASET_PATH || '',
+    dataset_path: process.env.ME_CONFIG_DATASET_PATH || '/datasets',
   },
 
   //set useBasicAuth to true if you want to authenticate mongo-express loggins
