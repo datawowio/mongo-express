@@ -100,6 +100,7 @@ if (!config.site.baseUrl) {
 
 app.use(config.site.baseUrl, middleware(config));
 app.use(config.site.baseUrl, csrf());
+app.use(express.static(config.datawow.dataset_path));
 
 if (config.site.sslEnabled) {
   defaultPort     = 443;
@@ -139,5 +140,3 @@ server.listen(config.site.port, config.site.host, function () {
   console.log(JSON.stringify(e));
   return process.exit(1);
 });
-
-app.use(express.static('/Users/jeep/projects/deep_learning/datasets'));
