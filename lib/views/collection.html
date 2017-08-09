@@ -252,6 +252,7 @@
   <div class="table-responsive tableWrapper">
     <table class="table table-striped tableHeaderFooterBars">
       <thead>
+        <th> display </th>
         {% for column in columns %}
           <th class="sorting-button" data-column="{{column}}" data-direction="{{sort[column]}}" title="Sort by {{column}}">
             {{column}}
@@ -262,11 +263,12 @@
             {% endif %}
           </th>
         {% endfor %}
-        <th> display </th>
-
       </thead>
       {% for document in docs %}
         <tr onclick="loadDocument('{{ document._id | json | safe | url_encode }}')">
+          <td>
+            <img class="display -thumbnail"src="{{document.filename}}">
+          </td>
           {% for column in columns %}
             <td><div class="tableContent">
               {% if !settings.read_only && column === '_id' && collectionName !== 'system.indexes' %}
@@ -280,9 +282,6 @@
             {{ document[column] | stringDocIDs | to_display | safe }}
             </div></td>
           {% endfor %}
-          <td>
-            <img class="display -thumbnail"src="{{document.filename}}">
-          </td>
         </tr>
       {% endfor %}
     </table>
